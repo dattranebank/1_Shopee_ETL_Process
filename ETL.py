@@ -52,10 +52,11 @@ def transform_data_for_t01(orders_history_lst):
     return sellers_lst_of_dicts
 
 
-def load_to_csv_t01(df):
+def load_to_csv_t01(df, output_path):
     try:
         # Write .csv file
-        df.to_csv("Output\\T01_SELLERS.csv", sep=",", encoding="utf-8", index=False, header=True)
+        output_path = output_path + "T01_SELLER.csv"
+        df.to_csv(output_path, sep=",", encoding="utf-8", index=False, header=True)
         # Check if file was created successfully
         if os.path.exists("Output\\T01_SELLERS.csv"):
             print(f"{Fore.GREEN}T01_SELLERS.csv file has been successfully exported.{Style.RESET_ALL}")
@@ -81,10 +82,11 @@ def transform_data_for_t02(orders_history_lst):
     return orders_lst_of_dicts
 
 
-def load_to_csv_t02(df):
+def load_to_csv_t02(df, output_path):
     try:
         # Write .csv file
-        df.to_csv("Output\\T02_ORDERS_HISTORY.csv", sep=",", encoding="utf-8", index=False, header=True)
+        output_path = output_path + "T02_ORDERS_HISTORY.csv"
+        df.to_csv(output_path, sep=",", encoding="utf-8", index=False, header=True)
         # Check if file was created successfully
         if os.path.exists("Output\\T02_ORDERS_HISTORY.csv"):
             print(f"{Fore.GREEN}T02_ORDERS_HISTORY.csv file has been successfully exported.{Style.RESET_ALL}")
@@ -118,16 +120,16 @@ def transform_data_for_t03(orders_history_lst):
     return orders_lst_of_dicts
 
 
-def load_to_csv_t03(df):
+def load_to_csv_t03(df,output_path):
     try:
         # Write .csv file
-        df.to_csv("Output\\T03_ORDER_DETAILS_HISTORY.csv", sep=",", encoding="utf-8", index=False, header=True)
+        output_path = output_path + "T03_ORDER_DETAILS.csv"
+        df.to_csv(output_path, sep=",", encoding="utf-8", index=False, header=True)
         # Check if file was created successfully
         if os.path.exists("Output\\T03_ORDER_DETAILS_HISTORY.csv"):
             print(f"{Fore.GREEN}T03_ORDER_DETAILS_HISTORY.csv file has been successfully exported.{Style.RESET_ALL}")
         else:
             print(f"{Fore.RED}ERROR: T03_ORDER_DETAILS_HISTORY.csv file was not created.{Style.RESET_ALL}")
     except Exception as e:
-        print(f"{Fore.RED}ERROR: An error occurred while exporting T03_ORDER_DETAILS_HISTORY.csv file: {e}{Style.RESET_ALL}")
-
-
+        print(
+            f"{Fore.RED}ERROR: An error occurred while exporting T03_ORDER_DETAILS_HISTORY.csv file: {e}{Style.RESET_ALL}")
