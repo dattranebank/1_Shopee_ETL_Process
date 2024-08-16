@@ -40,14 +40,21 @@ def main():
 
     logging.info("Bắt đầu xử lý dữ liệu.")
     print()
-    print(f"{Fore.BLUE}Nhập đường dẫn để export file, ví dụ như D:\\Output\\{Style.RESET_ALL}")
+    print(f"{Fore.BLUE}Nhập đường dẫn để export file, ví dụ như D:\\Output{Style.RESET_ALL}")
     output_path = input("Output path: ")
 
     try:
         # Extract from HTML File
         orders_history_lst = extract_data_from_tag(htmlfile)
         logging.info("Dữ liệu đã được extract từ file HTML.")
+    except Exception as e:
+        logging.error(f"Đã xảy ra lỗi: {str(e)}")
+        logging.error("Chương trình kết thúc do lỗi.")
+        print(f"{Fore.RED}ERROR: Đã xảy ra lỗi trong quá trình extract.{Style.RESET_ALL}")
+        print(f"{Fore.RED}Đã xảy ra lỗi: {str(e)}{Style.RESET_ALL}")
+        sys.exit("Chương trình kết thúc do lỗi.")
 
+    try:
         # Transform for T01_SELLERS
         lst_of_dicts_t01 = transform_data_for_t01(orders_history_lst)
         df1_unique = data_transformation_algorithm_for_t01(lst_of_dicts_t01)
@@ -74,7 +81,8 @@ def main():
     except Exception as e:
         logging.error(f"Đã xảy ra lỗi: {str(e)}")
         logging.error("Chương trình kết thúc do lỗi.")
-        print(f"{Fore.RED}ERROR: Đã xảy ra lỗi trong quá trình xử lý.{Style.RESET_ALL}")
+        print(f"{Fore.RED}ERROR: Đã xảy ra lỗi trong quá trình transform và load.{Style.RESET_ALL}")
+        print(f"Đã xảy ra lỗi: {str(e)}")
         sys.exit("Chương trình kết thúc do lỗi.")
 
     logging.info("Chương trình kết thúc.")
