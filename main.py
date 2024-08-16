@@ -19,7 +19,7 @@ def main():
     logging.info("Chương trình bắt đầu.")
     print(f"{Fore.BLUE}Nhập đường dẫn để import file, ví dụ như D:\\NewFolder\\Shopee_Orders.html{Style.RESET_ALL}")
     try:
-        htmlfile = input("Input path: ")
+        htmlfile = input("Example_Input path: ")
         # Kiểm tra xem tệp có phần mở rộng .html không
         if not htmlfile.lower().endswith('.html'):
             raise ValueError
@@ -40,8 +40,8 @@ def main():
 
     logging.info("Bắt đầu xử lý dữ liệu.")
     print()
-    print(f"{Fore.BLUE}Nhập đường dẫn để export file, ví dụ như D:\\Output{Style.RESET_ALL}")
-    output_path = input("Output path: ")
+    print(f"{Fore.BLUE}Nhập đường dẫn để export file, ví dụ như D:\\Example_Output{Style.RESET_ALL}")
+    output_path = input("Example_Output path: ")
 
     try:
         # Extract from HTML File
