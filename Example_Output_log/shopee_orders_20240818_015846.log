@@ -1,0 +1,12 @@
+2024-08-18 01:58:46,809 - INFO - Chương trình bắt đầu.
+2024-08-18 01:58:53,258 - INFO - Tệp H:\Input\Shopee_Orders.html đã được tìm thấy.
+2024-08-18 01:58:53,259 - INFO - Bắt đầu xử lý dữ liệu.
+2024-08-18 01:58:58,138 - INFO - Thư mục H:\Output_csv đã được tạo thành công.
+2024-08-18 01:58:58,615 - INFO - Dữ liệu đã được extract từ file HTML.
+2024-08-18 01:58:58,738 - INFO - Dữ liệu đã được transform cho T01_SELLERS.
+2024-08-18 01:58:58,813 - INFO - Dữ liệu đã được transform cho T02_ORDERS_HISTORY.
+2024-08-18 01:58:58,883 - INFO - Dữ liệu đã được transform cho T03_ORDER_DETAILS_HISTORY.
+2024-08-18 01:58:58,892 - INFO - Dữ liệu đã được load vào T01_SELLERS.csv.
+2024-08-18 01:58:58,893 - INFO - Dữ liệu đã được load vào T02_ORDERS_HISTORY.csv.
+2024-08-18 01:58:58,895 - INFO - Dữ liệu đã được load vào T03_ORDER_DETAILS_HISTORY.csv.
+2024-08-18 01:58:58,895 - INFO - Chương trình kết thúc.

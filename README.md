@@ -23,8 +23,8 @@ Xem hướng dẫn cài đặt trên Google, Youtube =)))\
 **2.2. Build Docker Image**\
 Khởi động Docker và nhập lệnh: `docker image build -t python_etl .`\
 **2.3. Run Docker Container**\
-Đầu tiên, ta tạo 3 thư mục lần lượt là `H:/Input`, `H:/Output`\, `H:/log_files`\
-Tiếp theo, nhập lệnh: `docker container run -it -v H:/Input:/app/input -v H:/Output:/app/output -v H:/log_files:/app/log_files python_etl`\
+Đầu tiên, ta tạo 3 thư mục lần lượt là `H:/Input`, `H:/Output_csv`\, `H:/Output_log`\
+Tiếp theo, nhập lệnh: `docker container run -it -v H:/Input:/app/input -v H:/Output_csv:/app/output -v H:/Output_log:/app/log_files python_etl`\
 **2.4. Upload Docker Image to Docker Hub**\
 Ta mở CMD với quyền Administrator và nhập các lệnh: `docker login`\
 `docker image tag python_etl datebank/python_etl_repository:latest`\
