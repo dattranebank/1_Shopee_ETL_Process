@@ -8,7 +8,7 @@ from analysis import *
 from colorama import Fore, Style
 
 # Tạo tên file log với dấu thời gian
-log_filename = f"log files\\shopee_orders_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+log_filename = f"log_files\\shopee_orders_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
 # Cấu hình logging
 logging.basicConfig(filename=log_filename, level=logging.INFO,
                     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -17,7 +17,7 @@ logging.basicConfig(filename=log_filename, level=logging.INFO,
 
 def main():
     logging.info("Chương trình bắt đầu.")
-    print(f"{Fore.BLUE}Nhập đường dẫn để import file, ví dụ như D:\\Input\\Shopee_Orders.html{Style.RESET_ALL}")
+    print(f"{Fore.BLUE}Nhập đường dẫn để import file, ví dụ như H:\\Input\\Shopee_Orders.html{Style.RESET_ALL}")
     try:
         htmlfile = input("Input path: ")
         # Kiểm tra xem tệp có phần mở rộng .html không
@@ -40,7 +40,7 @@ def main():
 
     logging.info("Bắt đầu xử lý dữ liệu.")
     print()
-    print(f"{Fore.BLUE}Nhập đường dẫn để export file, ví dụ như D:\\Output{Style.RESET_ALL}")
+    print(f"{Fore.BLUE}Nhập đường dẫn để export file, ví dụ như H:\\Output{Style.RESET_ALL}")
     output_path = input("Output path: ")
 
     try:
