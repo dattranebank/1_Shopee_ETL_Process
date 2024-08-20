@@ -18,10 +18,9 @@ logging.basicConfig(filename=log_filename, level=logging.INFO,
 
 def main():
     logging.info("Chương trình bắt đầu.")
-    print(f"{Fore.BLUE}Nhập đường dẫn để import file, ví dụ như H:\\Input\\Shopee_Orders.html{Style.RESET_ALL}")
-
     # Input
     try:
+        print(f"{Fore.BLUE}Nhập đường dẫn để import file, ví dụ như H:\\Input\\Shopee_Orders.html{Style.RESET_ALL}")
         htmlfile = input(f"Input path: ")
         # Kiểm tra xem tệp có phần mở rộng .html không
         if not htmlfile.lower().endswith('.html'):
@@ -42,7 +41,7 @@ def main():
         print(f"{Fore.RED}ERROR: Đường dẫn không hợp lệ.{Style.RESET_ALL}")
         sys.exit(f"{Fore.RED}Chương trình kết thúc do lỗi.{Style.RESET_ALL}")
 
-    logging.info("Bắt đầu xử lý dữ liệu.")
+
     print()
     print(f"{Fore.BLUE}Nhập đường dẫn để export .csv file, ví dụ như H:\\Output_csv{Style.RESET_ALL}")
     output_path = input("Output path: ")
@@ -62,6 +61,7 @@ def main():
         logging.info(f"Thư mục {output_path} đã tồn tại.")
         print(f"{Fore.GREEN}Thư mục đã tồn tại.{Style.RESET_ALL}")
 
+    logging.info("Bắt đầu quy trình ETL.")
     # Extract
     try:
         # Extract from HTML File

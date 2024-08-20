@@ -1,10 +1,15 @@
 # Đã tối ưu Dockerfile
 # Step 1: Sử dụng một image Python từ Docker Hub
 FROM python:3.11.9
+
+# Cập nhật danh sách các gói và cài đặt tzdata để cấu hình múi giờ trong container.
+# tzdata giúp thiết lập múi giờ chính xác cho container, đảm bảo thời gian trong container
+# khớp với múi giờ mà bạn đã chỉ định thông qua biến môi trường TZ.
 RUN apt-get update && apt-get install -y tzdata
 
 # Thiết lập múi giờ (thay đổi theo múi giờ của bạn)
 ENV TZ=Asia/Ho_Chi_Minh
+
 # Đặt label (optional)
 LABEL author="Dat Ebank"
 
