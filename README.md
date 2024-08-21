@@ -20,6 +20,8 @@ Chào mọi người, mình là Đạt, đây là project build ETL Process vớ
 2. **Transform:** Làm sạch và biến đổi dữ liệu thành định dạng phù hợp với cơ sở dữ liệu MSSQL.
 3. **Load:** Nạp dữ liệu vào cơ sở dữ liệu MSSQL và chuẩn bị dữ liệu cho việc phân tích và báo cáo trong Power BI.
 4. **Deploy:** Sử dụng Docker để đóng gói và triển khai ứng dụng ETL, đảm bảo tính nhất quán và dễ dàng trong việc quản lý môi trường.
+   
+![image](https://github.com/user-attachments/assets/c51f7e0b-778a-4ab2-877e-653cf250de53)
 
 ## II. Run within PyCharm
 ### 2.1. Install Python 3.11.9 Interpreter
