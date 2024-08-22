@@ -22,7 +22,7 @@ Chào mọi người, mình là Đạt, đây là project build ETL Process vớ
 4. **Deploy:** Sử dụng Docker để đóng gói và triển khai ứng dụng ETL, đảm bảo tính nhất quán và dễ dàng trong việc quản lý môi trường.
 
 ### 1.4. Data Source
-![img_1.png](img_1.png)
+![img_2.png](img_2.png)
 
 ## II. Run within PyCharm
 ### 2.1. Install Python 3.11.9 Interpreter
