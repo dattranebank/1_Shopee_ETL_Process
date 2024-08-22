@@ -15,11 +15,14 @@ Chào mọi người, mình là Đạt, đây là project build ETL Process vớ
 * **Mức độ khó của project:** Easy/Beginner
 * **Data Sources:** HTML file về những đơn hàng đã mua trên Shopee
 
-### 1.3. ETL
+### 1.3. ETL Process
 1. **Extract:** Đọc và phân tích các tệp HTML để trích xuất thông tin đơn hàng.
 2. **Transform:** Làm sạch và biến đổi dữ liệu thành định dạng phù hợp với cơ sở dữ liệu MSSQL.
 3. **Load:** Nạp dữ liệu vào cơ sở dữ liệu MSSQL và chuẩn bị dữ liệu cho việc phân tích và báo cáo trong Power BI.
 4. **Deploy:** Sử dụng Docker để đóng gói và triển khai ứng dụng ETL, đảm bảo tính nhất quán và dễ dàng trong việc quản lý môi trường.
+
+### 1.4. Data Source
+![img_1.png](img_1.png)
 
 ## II. Run within PyCharm
 ### 2.1. Install Python 3.11.9 Interpreter
